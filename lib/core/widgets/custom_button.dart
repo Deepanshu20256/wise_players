@@ -11,6 +11,9 @@ class CustomButton extends StatelessWidget {
   final Widget child;
   final IconData? icon;
   final double? iconSize;
+  final bool isBorderSide;
+  final Color borderColor;
+  final double borderWidth;
 
   const CustomButton({
     super.key,
@@ -22,6 +25,9 @@ class CustomButton extends StatelessWidget {
     this.borderRadius = 10,
     this.icon,
     this.iconSize = 15,
+    this.isBorderSide = false,
+    this.borderColor = AppColor.coralRed,
+    this.borderWidth = 1,
   });
 
   @override
@@ -31,9 +37,13 @@ class CustomButton extends StatelessWidget {
       width: width,
       child: ElevatedButton.icon(
         style: ElevatedButton.styleFrom(
+          // enabledMouseCursor: SystemMouseCursors.click,
           padding: EdgeInsets.all(0),
           backgroundColor: backgroundColor,
           shape: RoundedRectangleBorder(
+            side: isBorderSide
+                ? BorderSide(color: borderColor, width: borderWidth)
+                : BorderSide.none,
             borderRadius: BorderRadius.circular(borderRadius),
           ),
         ),

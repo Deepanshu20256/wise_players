@@ -10,7 +10,10 @@ Future<Map<String, String>> getDeviceInfo() async {
 
   if (Platform.isAndroid) {
     final androidInfo = await deviceInfo.androidInfo;
-    generateMacLikeId(androidId: androidInfo.id, model: androidInfo.model);
+    String macId = generateMacLikeId(
+      androidId: androidInfo.id,
+      model: androidInfo.model,
+    );
     return {
       "brand": androidInfo.brand, // Samsung
       "model": androidInfo.model, // Galaxy S23
@@ -19,6 +22,7 @@ Future<Map<String, String>> getDeviceInfo() async {
       "androidVersion": androidInfo.version.release, // 14
       "sdkInt": androidInfo.version.sdkInt.toString(), // 34
       "androidId": androidInfo.id, // ANDROID_ID
+      "macLikeId": macId,
     };
   }
 

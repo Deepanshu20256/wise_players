@@ -1,6 +1,7 @@
 class ApiResult<T> {
   final T? data;
   final String? error;
+
   final bool isSuccess;
 
   ApiResult._({this.data, this.error, required this.isSuccess});

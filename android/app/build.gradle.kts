@@ -24,17 +24,40 @@ android {
         applicationId = "com.example.wise_players"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
-        minSdk = flutter.minSdkVersion
-        targetSdk = flutter.targetSdkVersion
-        versionCode = flutter.versionCode
-        versionName = flutter.versionName
+        minSdk = 26
+        targetSdk = 36
+        multiDexEnabled = true
+        versionCode = 1
+        versionName = "1.0.0"
+    }
+     signingConfigs {
+        create("release") {
+            keyAlias = "harseth_key"
+            keyPassword = "@pearl123"
+            storeFile = file("C:/flutter/flutter_projects/harsethapplication/android/app/harseth.jks")
+            storePassword = "@pearl123"
+        }
     }
 
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.getByName("release")
+        }
+    }
+    buildTypes {
+        getByName("release") {
+            signingConfig = signingConfigs.getByName("release")
+            isMinifyEnabled = true
+            isDebuggable  = false
+            isShrinkResources = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+              
+
         }
     }
 }

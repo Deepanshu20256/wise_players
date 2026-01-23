@@ -33,12 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Center(
         // child: Text("Jay shree Ram"),
-        child: InkWell(
-          onTap: () {
-            // GoRouter.of(context).go(DashboardScreen.routeName);
-          },
-          child: SizedBox(height: 100, width: 200, child: Image.asset(applogo)),
-        ),
+        child: SizedBox(height: 100, width: 200, child: Image.asset(applogo)),
       ),
     );
   }

@@ -48,6 +48,7 @@ class AppColor {
   static const Color lightOrange = Color(0xFFFFA726);
   static const Color golden = Color(0xFFFFB803);
   static const Color pastelYellow = Color(0xFFFFE265);
+  static const Color transparent = Color(0x00000000);
 }
 //   static const Color bottomNavigationColor = Color(0xFFFFFBFB);
 //   static const Color white = Color(0xFFFFFFFF);
