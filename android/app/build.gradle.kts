@@ -1,12 +1,19 @@
+import java.util.Properties
+import java.io.FileInputStream
 plugins {
     id("com.android.application")
     id("kotlin-android")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
+val keystoreProperties = Properties()
+val keystorePropertiesFile = rootProject.file("key.properties")
 
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+}
 android {
-    namespace = "com.example.wise_players"
+    namespace = "com.pearl.wisePlayerTV"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -21,21 +28,21 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId = "com.example.wise_players"
+        applicationId = "com.pearl.wisePlayerTV"
         // You can update the following values to match your application needs.
         // For more information, see: https://flutter.dev/to/review-gradle-config.
         minSdk = 26
         targetSdk = 36
         multiDexEnabled = true
-        versionCode = 1
-        versionName = "1.0.0"
+        versionCode = 4
+        versionName = "1.0.3"
     }
      signingConfigs {
         create("release") {
-            keyAlias = "harseth_key"
-            keyPassword = "@pearl123"
-            storeFile = file("C:/flutter/flutter_projects/harsethapplication/android/app/harseth.jks")
-            storePassword = "@pearl123"
+           keyAlias = keystoreProperties["keyAlias"] as String
+            keyPassword = keystoreProperties["keyPassword"] as String
+            storePassword = keystoreProperties["storePassword"] as String
+            storeFile = file(keystoreProperties["storeFile"] as String)
         }
     }
 

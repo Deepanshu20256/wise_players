@@ -4,6 +4,7 @@ class AppRoutes {
   static const String dashboard = '/dashboard';
   static const String webDashboard = '/web-dashboard';
   static const String loginWithMac = '/login-with-mac';
+  static const String fetchPhoneInfoMac = "/fetch_phone_info_mac";
   // static const String enterPhoneNumber = '/enterPhoneNumber';
   // static const String verifyPhoneOtp = '/verifyPhoneOtp';
   // static const String userForm = '/userForm';

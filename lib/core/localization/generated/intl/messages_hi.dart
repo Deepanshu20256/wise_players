@@ -22,6 +22,28 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "home": MessageLookupByLibrary.simpleMessage("होम"),
+    "activateNow": MessageLookupByLibrary.simpleMessage("अभी सक्रिय करें"),
+    "cancel": MessageLookupByLibrary.simpleMessage("नहीं"),
+    "exit": MessageLookupByLibrary.simpleMessage("बाहर निकलें"),
+    "exitConfirmMessage": MessageLookupByLibrary.simpleMessage(
+      "क्या आप वाकई बाहर निकलना चाहते हैं?",
+    ),
+    "language": MessageLookupByLibrary.simpleMessage("भाषा (HI)"),
+    "macLabel": MessageLookupByLibrary.simpleMessage("आपका MAC"),
+    "macNotAssociated": MessageLookupByLibrary.simpleMessage(
+      "आपका MAC पता किसी भी प्लेलिस्ट से जुड़ा नहीं है",
+    ),
+    "okk": MessageLookupByLibrary.simpleMessage("ठीक है"),
+    "playerNotActive": MessageLookupByLibrary.simpleMessage(
+      "यह प्लेयर अभी सक्रिय नहीं है। कंटेंट देखने के लिए अपनी सदस्यता सक्रिय करें।",
+    ),
+    "power": MessageLookupByLibrary.simpleMessage("पावर"),
+    "refresh": MessageLookupByLibrary.simpleMessage("रीफ्रेश करें"),
+    "tvOnlyWarning": MessageLookupByLibrary.simpleMessage(
+      "WisePlayer.app केवल एक टीवी प्लेयर है और इसमें कोई चैनल शामिल नहीं हैं",
+    ),
+    "uploadPlaylist": MessageLookupByLibrary.simpleMessage(
+      "प्लेलिस्ट अपलोड करें",
+    ),
   };
 }

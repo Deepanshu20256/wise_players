@@ -5,7 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import 'package:wise_players/core/routes/routes_path.dart';
-import 'package:wise_players/core/widgets/responsive/responsive_layout.dart';
+import 'package:wise_players/presentation/screen_view/common/auth/login_with_mac.dart';
+import 'package:wise_players/presentation/screen_view/responsive/responsive_layout.dart';
 import 'package:wise_players/presentation/screen_view/common/splash/splash_screen.dart';
 import 'package:wise_players/presentation/screen_view/mobile/dashboard.dart';
 import 'package:wise_players/presentation/screen_view/web/web_dashboard_screen.dart';
@@ -24,9 +25,17 @@ final GoRouter router = GoRouter(
       path: AppRoutes.screenLayout,
       builder: (context, state) => ScreenLayoutScreen(),
     ),
+
     GoRoute(
       path: AppRoutes.webDashboard,
       builder: (context, state) => WebDashboardScreen(),
+    ),
+    GoRoute(
+      path: AppRoutes.loginWithMac,
+      builder: (context, state) {
+        String deviceKey = state.extra as String;
+        return LoginWithMac(deviceKey: deviceKey);
+      },
     ),
     GoRoute(
       path: AppRoutes.dashboard,

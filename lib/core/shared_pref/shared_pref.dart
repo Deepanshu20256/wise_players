@@ -6,14 +6,12 @@ class SharedPref {
     required String deviceId,
     required String status,
     required String token,
-    required String deviceKey,
   }) async {
     SharedPreferences pref = await SharedPreferences.getInstance();
     pref.setString('deviceId', deviceId);
     pref.setString('mac', macAddress);
     pref.setString('status', status);
     pref.setString('token', token); //INACTIVE
-    pref.setString('deviceKey', deviceKey);
   }
 
   static Future<Map<String, dynamic>> getUserDeviceInfo() async {
@@ -23,7 +21,6 @@ class SharedPref {
       'mac': pref.getString('mac') ?? '',
       'status': pref.getString('status') ?? '',
       'token': pref.getString('token') ?? '', //INACTIVE
-      'deviceKey': pref.getString('deviceKey') ?? '',
     };
     return userinfo;
   }
@@ -36,5 +33,21 @@ class SharedPref {
     } else {
       return true;
     }
+  }
+
+  static setUserDeviceStatus(String status) async {
+    SharedPreferences pref = await SharedPreferences.getInstance();
+    pref.setString('status', status.toUpperCase());
+  }
+
+  static setValidateStatus({
+    required String deviceId,
+    required String status,
+    required String token,
+  }) async {
+    SharedPreferences pref = await SharedPreferences.getInstance();
+    pref.setString('deviceId', deviceId);
+    pref.setString('status', status);
+    pref.setString('token', token);
   }
 }

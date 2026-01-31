@@ -54,9 +54,99 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Home`
-  String get home {
-    return Intl.message('Home', name: 'home', desc: '', args: []);
+  /// `Exit`
+  String get exit {
+    return Intl.message('Exit', name: 'exit', desc: '', args: []);
+  }
+
+  /// `Okk`
+  String get okk {
+    return Intl.message('Okk', name: 'okk', desc: '', args: []);
+  }
+
+  /// `Cancel`
+  String get cancel {
+    return Intl.message('Cancel', name: 'cancel', desc: '', args: []);
+  }
+
+  /// `Are you sure you want to exit?`
+  String get exitConfirmMessage {
+    return Intl.message(
+      'Are you sure you want to exit?',
+      name: 'exitConfirmMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your MAC address is not associated with any playlist`
+  String get macNotAssociated {
+    return Intl.message(
+      'Your MAC address is not associated with any playlist',
+      name: 'macNotAssociated',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Upload Playlist`
+  String get uploadPlaylist {
+    return Intl.message(
+      'Upload Playlist',
+      name: 'uploadPlaylist',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Refresh`
+  String get refresh {
+    return Intl.message('Refresh', name: 'refresh', desc: '', args: []);
+  }
+
+  /// `Language (EN)`
+  String get language {
+    return Intl.message('Language (EN)', name: 'language', desc: '', args: []);
+  }
+
+  /// `Power`
+  String get power {
+    return Intl.message('Power', name: 'power', desc: '', args: []);
+  }
+
+  /// `This player is not active yet. Activate your subscription to access content.`
+  String get playerNotActive {
+    return Intl.message(
+      'This player is not active yet. Activate your subscription to access content.',
+      name: 'playerNotActive',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Activate Now`
+  String get activateNow {
+    return Intl.message(
+      'Activate Now',
+      name: 'activateNow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Your MAC`
+  String get macLabel {
+    return Intl.message('Your MAC', name: 'macLabel', desc: '', args: []);
+  }
+
+  /// `WisePlayer.app is a TV player only and does not include any channels`
+  String get tvOnlyWarning {
+    return Intl.message(
+      'WisePlayer.app is a TV player only and does not include any channels',
+      name: 'tvOnlyWarning',
+      desc: '',
+      args: [],
+    );
   }
 }
 

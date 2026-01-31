@@ -1,6 +1,5 @@
 import 'package:dio/dio.dart';
-
-const String baseUrl = "https://pulverulently-balletic-lashon.ngrok-free.dev";
+import 'package:wise_players/data/_api/api_services/end_points.dart';
 
 class DioClient {
   static final DioClient _instance = DioClient._internal();

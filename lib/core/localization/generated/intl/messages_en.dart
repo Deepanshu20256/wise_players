@@ -22,6 +22,26 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "home": MessageLookupByLibrary.simpleMessage("Home"),
+    "activateNow": MessageLookupByLibrary.simpleMessage("Activate Now"),
+    "cancel": MessageLookupByLibrary.simpleMessage("Cancel"),
+    "exit": MessageLookupByLibrary.simpleMessage("Exit"),
+    "exitConfirmMessage": MessageLookupByLibrary.simpleMessage(
+      "Are you sure you want to exit?",
+    ),
+    "language": MessageLookupByLibrary.simpleMessage("Language (EN)"),
+    "macLabel": MessageLookupByLibrary.simpleMessage("Your MAC"),
+    "macNotAssociated": MessageLookupByLibrary.simpleMessage(
+      "Your MAC address is not associated with any playlist",
+    ),
+    "okk": MessageLookupByLibrary.simpleMessage("Okk"),
+    "playerNotActive": MessageLookupByLibrary.simpleMessage(
+      "This player is not active yet. Activate your subscription to access content.",
+    ),
+    "power": MessageLookupByLibrary.simpleMessage("Power"),
+    "refresh": MessageLookupByLibrary.simpleMessage("Refresh"),
+    "tvOnlyWarning": MessageLookupByLibrary.simpleMessage(
+      "WisePlayer.app is a TV player only and does not include any channels",
+    ),
+    "uploadPlaylist": MessageLookupByLibrary.simpleMessage("Upload Playlist"),
   };
 }

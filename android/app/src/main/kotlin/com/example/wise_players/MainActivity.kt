@@ -1,4 +1,4 @@
-package com.example.wise_players
+package com.pearl.wisePlayerTV
 
 import io.flutter.embedding.android.FlutterActivity
 

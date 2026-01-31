@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 
 class CustomTextFormFiled extends StatefulWidget {
   final FocusNode? focusNode;
+  final bool isReadOnly;
   final TextEditingController controller;
   final String hintText;
   final double borderRadius;
@@ -36,6 +37,7 @@ class CustomTextFormFiled extends StatefulWidget {
     required this.controller,
     this.hintText = "",
     this.prefixIcon = const SizedBox(),
+    this.isReadOnly = false,
     this.borderRadius = 11,
     this.borderSideColor = Colors.grey,
     this.isFilled = false,
@@ -77,7 +79,7 @@ class _CustomTextFormFiledState extends State<CustomTextFormFiled> {
             ]
           : null,
       enabled: widget.isEnabled,
-
+      readOnly: widget.isReadOnly,
       keyboardType: widget.keyboardType,
       maxLength: widget.maxWords,
       maxLines: widget.maxLines,

@@ -9,7 +9,7 @@ import 'package:wise_players/core/routes/router.dart';
 import 'package:wise_players/presentation/screen_view/common/splash/splash_screen.dart';
 import 'package:wise_players/presentation/screen_view/mobile/dashboard.dart';
 
-import 'core/widgets/responsive/responsive_layout.dart';
+import 'presentation/screen_view/responsive/responsive_layout.dart';
 // import 'package:wise_players/presentation/screen_view/mobile/dashboard.dart';
 
 void main() {
